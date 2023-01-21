@@ -72,7 +72,33 @@ const Painting = sequelize.define(
 Artist.hasMany(Painting, { foreignKey: "artistId" });
 Painting.belongsTo(Artist, { foreignKey: "artistId" });
 
+async function createArtist(artistName, artistDOB) {
+  try {
+    const newArtist = Artist.build({
+      artistName: artistName,
+      artistDOB: artistDOB,
+    });
+    await newArtist.save();
+    console.log("Artist created successfully: ", newArtist);
+  } catch (error) {
+    console.error("Error creating artist: ", error);
+  }
+}
 
+async function createPainting(paintingId, title, imageUrl, artistId) {
+  try {
+    const newPainting = Painting.build({
+      paintingId: paintingId,
+      title: title,
+      imageUrl: imageUrl,
+      artistId: artistId,
+    });
+    await newPainting.save();
+    console.log("Painting created successfully: ", newPainting);
+  } catch (error) {
+    console.error("Error creating artist: ", error);
+  }
+}
 
 sequelize
   .authenticate()

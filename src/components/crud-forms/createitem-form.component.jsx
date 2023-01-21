@@ -27,11 +27,11 @@ const CreateItemForm = () => {
   const [artist, setArtist] = useState(defaultArtist);
   const [painting, setPainting] = useState(defaultPainting);
 
+  const { artistName, artistYOB } = artist;
+
   const onChangeArtist = (event) => {
     const { name, value } = event.target;
     setArtist({ ...artist, [name]: value });
-    console.log(event.target);
-    console.log(artist);
   };
   const onChangePainting = (event) => {
     const { name, value } = event.target;
@@ -57,7 +57,7 @@ const CreateItemForm = () => {
       .catch((error) => {
         console.error(error);
       });
-    setArtist(defaultArtist);
+    //setArtist(defaultArtist);
   };
 
   const handlePaintingSubmit = (event) => {
