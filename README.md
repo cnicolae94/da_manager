@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Nota autoarei:
+
+Se instaleaza dependencies cu ajutoru comandei npm install.
+Proiectul a fost creat cu ajutorul npx create-react-app, folosind React, bootstrap, css. Backend-ul a fost realizat cu nodejs, sequelize si postgres DB si conexiunea se instantiaza conform terminalului pe port 8080, aplicatia react ruleaza pe port 3000 (default).
+
+Multumesc pentru atentia acordata.
+
 ## Available Scripts
 
 In the project directory, you can run:
