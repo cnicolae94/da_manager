@@ -1,30 +1,43 @@
 import Button from "./button.component";
+import "./button-container.styles.css";
 
 const operations = [
   {
     id: 1,
-    title: "Create",
+    title: "Album",
   },
   {
     id: 2,
-    title: "Update",
+    title: "Create",
   },
   {
     id: 3,
-    title: "Delete",
+    title: "Update",
   },
   {
     id: 4,
-    title: "Search by ID",
+    title: "Delete",
+  },
+  {
+    id: 5,
+    title: "Search_by_ID",
   },
 ];
 
 const ButtonContainer = () => {
+  const mainButtonClass = "btn btn-outline-primary";
   return (
-    <div className="button-container">
+    <div className="button-container" key="butt-container">
       {operations.map((item) => {
-        console.log(item.title);
-        <Button id={item.id} title={item.title} />;
+        return (
+          <Button
+            type="button"
+            id={item.id}
+            title={item.title}
+            classN={mainButtonClass}
+            key={item.id}
+          />
+        );
       })}
     </div>
   );

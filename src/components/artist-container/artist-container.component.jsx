@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import { albumText } from "../../assets/headers";
 
-export const ArtistContainer = () => {
+export const AlbumContainer = () => {
   const [artists, setArtists] = useState([]);
 
   async function getArtists() {
@@ -19,5 +20,5 @@ export const ArtistContainer = () => {
 
   console.log(artists);
 
-  return <div>This is a div that will be populated</div>;
+  return <h1>{albumText}</h1>;
 };

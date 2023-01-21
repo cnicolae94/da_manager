@@ -1,18 +1,15 @@
 import { Link } from "react-router-dom";
 
-const Button = (id, title) => {
-  const path = `/${title}`;
-  console.log("button succesfully generated");
+const Button = ({ type, id, title, classN }) => {
+  const lowercaseTitle = title.toLowerCase();
+  const path = `/${lowercaseTitle}`;
 
-  // <Link to={path}>
-  // <button type="button" className="btn btn-outline-primary" key={id}>
-  //     {title}
-  // </button>
-  // </Link>
   return (
-    <button type="button" className="btn btn-outline-primary">
-      {title}
-    </button>
+    <Link to={path}>
+      <button type={type} className={classN} key={id}>
+        {title}
+      </button>
+    </Link>
   );
 };
 
