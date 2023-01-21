@@ -4,6 +4,9 @@ const bodyParser = require("body-parser");
 const Sequelize = require("sequelize");
 const app = express();
 
+const cors = require("cors");
+app.use(cors());
+
 //=======Sequelize setup
 
 const database = "art";
@@ -281,6 +284,6 @@ app.delete("/paintings/:id", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log("REST API listening on port 3000");
+app.listen(8080, () => {
+  console.log("REST API listening on port 8080");
 });
