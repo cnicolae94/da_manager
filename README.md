@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Se instaleaza dependencies cu ajutoru comandei npm install.
 Proiectul a fost creat cu ajutorul npx create-react-app, folosind React, bootstrap, css. Backend-ul a fost realizat cu nodejs, sequelize si postgres DB si conexiunea se instantiaza conform terminalului pe port 8080, aplicatia react ruleaza pe port 3000 (default).
 
+### O pagina functionala pe care o puteti vizita este http://localhost:3000/create
+
 Multumesc pentru atentia acordata.
 
 ## Available Scripts
